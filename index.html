@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button onclick="addBookToLibrary()">ADD BOOK</button>
+    <form
+      id="addBookForm"
+      action="index.html"
+      method="post"
+      class="hidden"
+      onsubmit="addBook()"
+    >
+      <legend>ADD BOOK</legend>
+      <input
+        type="text"
+        id="book"
+        title="Please enter a valid book name"
+        name="book"
+        placeholder="The name of the book"
+        value="tst"
+        required
+      />
+      <input
+        type="text"
+        id="author"
+        title="Please enter a valid author"
+        name="author"
+        placeholder="The name of the author"
+        pattern="(\d{2}\w*)"
+        value="12ds"
+        required
+      />
+      <input
+        type="number"
+        id="pages"
+        name="pages"
+        title="Please enter a valid amount of page numbers."
+        min="1"
+        value="123"
+        placeholder="The amount of pages"
+        required
+      />
+      <br />
+      <div>
+        <input type="checkbox" name="read" id="read" />
+        <label for="read">Have you read the book?</label>
+      </div>
+      <br />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
