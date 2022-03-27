@@ -103,8 +103,8 @@ function addBook() {
   let object = {
     book: e.target[0].value,
     author: e.target[1].value,
-    pages: e.target[3].value,
-    read: e.target[4].value,
+    pages: e.target[2].value,
+    read: e.target[3].value,
     id: myLibrary[myLibrary.length - 1].id + 1,
   };
   myLibrary.push(object);
